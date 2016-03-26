@@ -7,7 +7,7 @@
      function initialize() {
          var mapProp = {
              center: new google.maps.LatLng(1.2896700, 103.8500700),
-             zoom: 10,
+             zoom: 12,
              mapTypeId: google.maps.MapTypeId.ROADMAP
          };
          var map = new google.maps.Map(document.getElementById("DivGoogleMapCanvas"), mapProp);
@@ -26,38 +26,37 @@
 
   
     <style type="text/css">
-        .style1
-        {
-            height: 50px;
-        }
         .style2
         {
         }
         .style3
         {
-            width: 162px;
+            width: 180px;
         }
         .style4
         {
-            width: 252px;
+        }
+        .style5
+        {
+            width: 109px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
         <tr>
-            <td class="style4">
+            <td class="style5">
                 Starting Point:</td>
             <td class="style3">
                 <asp:TextBox ID="startTxt" runat="server"></asp:TextBox>
             </td>
   
             <td rowspan="5">
-                <div id="DivGoogleMapCanvas" style="height:500px;">  </div></td>
+                <div id="DivGoogleMapCanvas" style="height:100vh;">  </div></td>
   
         </tr>
         <tr>
-            <td class="style4">
+            <td class="style5">
                 Destination:</td>
             <td class="style3">
                 <asp:TextBox ID="destinationTxt" runat="server"></asp:TextBox>
@@ -65,7 +64,7 @@
 
         </tr>
         <tr>
-            <td colspan="2" class="style1">
+            <td colspan="2">
                 Route Option:<asp:RadioButtonList ID="routeRbl" runat="server" AutoPostBack="True" RepeatDirection="Horizontal" >
                 <asp:ListItem>Fastest</asp:ListItem>
                 <asp:ListItem>Shortest</asp:ListItem>
@@ -75,14 +74,11 @@
 
         </tr>
         <tr>
-        <td class="style4">
-        
-            &nbsp;</td>
-        <td class="style3">
+        <td class="style4" colspan="2">
         
             <asp:Button ID="searchBtn" runat="server" Text="Search" />
         
-        </td>
+            </td>
         </tr>
        
         <tr>
