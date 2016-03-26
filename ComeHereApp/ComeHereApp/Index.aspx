@@ -1,18 +1,30 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ComeHereApp.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script language="javascript" type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU"></script>
+ <script language="javascript" type="text/javascript" src="js/jquery-1.8.2.min.js"></script>  
  <script language="javascript" type="text/javascript">
 
      function initialize() {
          var mapProp = {
              center: new google.maps.LatLng(1.2896700, 103.8500700),
-             zoom: 5,
+             zoom: 10,
              mapTypeId: google.maps.MapTypeId.ROADMAP
          };
          var map = new google.maps.Map(document.getElementById("DivGoogleMapCanvas"), mapProp);
+
+         var startInput = document.getElementById('<%= startTxt.ClientID %>');
+         var endInput = document.getElementById('<%= destinationTxt.ClientID %>');
+
+         var startAutocomplete = new google.maps.places.Autocomplete(startInput);
+         var endAutocomplete = new google.maps.places.Autocomplete(endInput);
+         autocomplete.bindTo('bounds', map);
      }
      google.maps.event.addDomListener(window, 'load', initialize);
- </script>
+
+  </script>    
+
+
+  
     <style type="text/css">
         .style1
         {
