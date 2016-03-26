@@ -1,0 +1,4 @@
+c:\users\jasmine\documents\visual studio 2010\Projects\ComeHereApp\ComeHereApp\bin\ComeHereApp.dll
+c:\users\jasmine\documents\visual studio 2010\Projects\ComeHereApp\ComeHereApp\bin\ComeHereApp.pdb
+c:\users\jasmine\documents\visual studio 2010\Projects\ComeHereApp\ComeHereApp\obj\Debug\ComeHereApp.dll
+c:\users\jasmine\documents\visual studio 2010\Projects\ComeHereApp\ComeHereApp\obj\Debug\ComeHereApp.pdb
