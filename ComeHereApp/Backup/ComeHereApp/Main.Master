@@ -5,24 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-      <p>
-                <img class="auto-style1" src="images/main_banner.jpg" /></p>
     <asp:ContentPlaceHolder ID="head" runat="server">
-       
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-            height: 20%;
-        }
-    </style>
 </head>
 <body id="mBody" runat="server">
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-           
         
         </asp:ContentPlaceHolder>
     </div>
