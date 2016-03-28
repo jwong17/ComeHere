@@ -18,5 +18,10 @@ namespace ComeHereApp
                 
             }
         }
+
+        protected void searchBtn_Click(object sender, EventArgs e)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "myScript", "calculateAndDisplayRoute(directionsService, directionsDisplay);", true);
+        }
     }
 }

@@ -22,25 +22,13 @@ namespace ComeHereWS
     {
 
         [WebMethod]
-        public string HelloWorld()
-        {
-            return "Hello World";
-        }
-
-        [WebMethod]
-        public int multiplication(int a, int b)
-        {
-            return a * b;
-        }
-
-        [WebMethod]
         public List<Route> retrieveListOfRoutes(string start, string destination)
         {
 
 
                 var directionStepsList = new List<Route>();
                 string xmlResult = null;
-                var webRequest = (HttpWebRequest)WebRequest.Create("http://maps.googleapis.com/maps/api/directions/xml?origin=" + HttpUtility.UrlEncode(start) + "&destination=" + HttpUtility.UrlEncode(destination) + "&sensor=false");
+                var webRequest = (HttpWebRequest)WebRequest.Create("http://maps.googleapis.com/maps/api/directions/xml?origin=" + HttpUtility.UrlEncode(start) + "&destination=" + HttpUtility.UrlEncode(destination) + "&mode=driving&alternatives=true&sensor=false");
                 var webResponse = (HttpWebResponse)webRequest.GetResponse();
                 StreamReader resStream = new StreamReader(webResponse.GetResponseStream());
                 XmlDocument xd = new XmlDocument();
@@ -87,6 +75,22 @@ namespace ComeHereWS
                 }
                 return directionStepsList;
 
+        }
+
+        [WebMethod(Description = "Returns a list of step by step directions to travel to the destination.")]
+        public List<RouteInfo> extractRouteInfo(string origins, string destination)
+        {
+            
+                var results = new List<RouteInfo>();
+                var dire = retrieveListOfRoutes(origins, destination);
+
+                foreach (Route ds in dire)
+                {
+                    results = ds.Steps;
+                }
+
+                return results;
+           
         }
     }
 }
