@@ -15,15 +15,23 @@
             <td>
                 Password:</td>
             <td>
-                <asp:TextBox ID="passWordTxt" runat="server"></asp:TextBox></td>
+                <asp:TextBox ID="passWordTxt" TextMode="Password" runat="server"></asp:TextBox></td>
 
         </tr>
         <tr>
             <td>
                 <asp:Button ID="signUpBtn" runat="server" Text="Sign Up" 
-        PostBackUrl="~/Registeration.aspx" /></td>
+        PostBackUrl="~/Registeration.aspx" OnClick="signUpBtn_Click" /></td>
             <td>
-               <asp:Button ID="submitBtn" runat="server" Text="Submit" /></td>
+               <asp:Button ID="submitBtn" runat="server" Text="Submit" OnClick="submitBtn_Click" /></td>
+
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                <asp:Label ID="Label1" runat="server" ForeColor="Red" Visible="False"></asp:Label>
+            </td>
 
         </tr>
     </table>

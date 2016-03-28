@@ -5,7 +5,8 @@
     <table style="width:100%;">
         <tr>
             <td>
-                Username:</td>
+                Username:
+            </td>
             <td>
                 <asp:TextBox ID="usernameTxt" runat="server"></asp:TextBox>
             </td>
@@ -33,7 +34,7 @@
                 
             </td>
             <td>
-                <asp:Button ID="submitBtn" runat="server" Text="Submit" />
+                <asp:Button ID="submitBtn" runat="server" Text="Submit" OnClick="submitBtn_Click" />
              </td>
 
         </tr>

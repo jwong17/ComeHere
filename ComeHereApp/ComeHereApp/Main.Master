@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
       <p>
-                <img class="auto-style1" src="images/main_banner.jpg" /></p>
+               <img class="auto-style1" src="images/main_banner.jpg" /></p>
     <asp:ContentPlaceHolder ID="head" runat="server">
        
     </asp:ContentPlaceHolder>

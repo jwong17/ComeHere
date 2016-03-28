@@ -67,6 +67,7 @@ namespace ComeHereApp
 
             SqlCommand com = new SqlCommand("UPDATE UsersCars SET totalDist = totalDist + " + tripDist.Text.ToString() + ", totalLitres = totalLitres + " + tripLitres.Text.ToString() + " WHERE userID = 1 and carID = "+selectCarDDL.SelectedValue.ToString(), con);
             com.ExecuteNonQuery();
+            
 
             refreshLabels();
             tripDist.Text = "";
